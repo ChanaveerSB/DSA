@@ -1,2 +1,3 @@
 # DSA
-This is my DSA journey
+This is my DSA journey.
+Let's dive in...
