@@ -6,22 +6,22 @@ public class P5_BacktrackP3 {
 
         func(i+1,n);
 
-        System.out.println(i);
+        System.out.print(i+" ");
     }
     
-    public static void func1(int m){
-        if(m==0) return;
+    public static void func1(int curr,int m){
+        if(curr>m) return;
 
-        func1(m-1);
+        func1(curr+1,m);
 
-        System.out.println(m);
+        System.out.print(curr+" ");
     }
 
     public static void main(String[] args) {
         int n=10;
         func(1,n);
-        System.out.println("-------------------------");
+        System.out.print("\n-------------------------\n");
         int m=10;
-        func1(m);
+        func1(1,m);
     }
 }
