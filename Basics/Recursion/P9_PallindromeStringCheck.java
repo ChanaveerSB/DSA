@@ -12,5 +12,6 @@ public class P9_PallindromeStringCheck {
 
         System.out.println(isPallindrome(s1,0,s1.length()-1));
         System.out.println(isPallindrome(s2,0,s2.length()-1));
+    
     }
 }
