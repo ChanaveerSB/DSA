@@ -27,3 +27,9 @@ public class P1_SelectionSort {
         
     }
 }
+
+//Time Complexity
+//Worst case = O(n^2)
+//Avg case = O(n^2)
+//Best case = 0(n^2)
+

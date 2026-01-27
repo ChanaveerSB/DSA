@@ -2,6 +2,7 @@ package F2_Sorting;
 
 import java.util.Arrays;
 
+//
 public class P2_BubbleSort {
     static void bubbleSort(int[] arr,int n){
         for(int i=0;i<n-1;i++){
@@ -27,3 +28,9 @@ public class P2_BubbleSort {
         bubbleSort(arr,n);
     }
 }
+
+//Time Complexity
+//Worst case = O(n^2)
+//Avg case = O(n^2)
+//Best case = 0(n)
+
