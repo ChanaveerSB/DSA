@@ -1,4 +1,4 @@
-package DSA.Basics.Recursion;
+package Basics.Recursion;
 
 public class P9_PallindromeStringCheck {
     public static boolean isPallindrome(String s,int i,int j){

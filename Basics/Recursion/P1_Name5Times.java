@@ -1,4 +1,4 @@
-package DSA.Basics.Recursion;
+package Basics.Recursion;
 
 public class P1_Name5Times {
     public static void func(int i,int n){

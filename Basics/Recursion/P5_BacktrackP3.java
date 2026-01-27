@@ -1,4 +1,4 @@
-package DSA.Basics.Recursion;
+package Basics.Recursion;
 
 public class P5_BacktrackP3 {
     public static void func(int i,int n){

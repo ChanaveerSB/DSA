@@ -1,4 +1,4 @@
-package DSA.Basics.Recursion;
+package Basics.Recursion;
 //Factorial of n numbers using recursion
 public class P7_Factorial {
     //Method 1

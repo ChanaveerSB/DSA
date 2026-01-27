@@ -1,4 +1,4 @@
-package DSA.Basics.Recursion;
+package Basics.Recursion;
 
 public class P6_SumOfNnums {
     //Method 1

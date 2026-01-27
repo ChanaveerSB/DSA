@@ -1,4 +1,4 @@
-package DSA.Basics.Maths;
+package Basics.Maths;
 
 public class Hi {
     public static void main(String[] args) {
