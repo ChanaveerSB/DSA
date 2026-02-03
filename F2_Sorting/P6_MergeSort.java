@@ -28,12 +28,12 @@ public class P6_MergeSort {
         }
 
         for(int i=low;i<=high;i++){
-            arr.set[i , temp.get(i-low)];
+            arr.set(i , temp.get(i-low));
         }
 ;
     }
-    static void mergeSort(Arraylist<Integer> arr, int low, int high){
-        if(low==high) return;
+    static void mergeSort(ArrayList<Integer> arr, int low, int high){
+        if(low>=high) return;
 
         int mid = (low+high) / 2;
 
@@ -44,8 +44,9 @@ public class P6_MergeSort {
     }
     public static void main(String[] args) {
         ArrayList<Integer> arr=new ArrayList<>();
-        Arrays.asList(9,8,7,6,5,4,3,2,1);
+        arr.addAll(Arrays.asList(9,8,7,6,5,4,3,2,1));
         System.out.println(arr);
-        P6_MergeSort.mergeSort(arr,0,arr.size());
+        P6_MergeSort.mergeSort(arr , 0 , arr.size()-1 );
+        System.out.println(arr);
     }
 }
