@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Frequency {
+public class P1_Frequency {
     public static List<List<Integer>> countFrequencies(int[] nums) {
         Map<Integer,Integer> freq=new HashMap<>();
 
