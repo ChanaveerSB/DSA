@@ -41,7 +41,7 @@ public class P2_HighestFrequency {
             freq.put(n , freq.getOrDefault(n, 0) + 1);
         }
 
-        int maxFreq=Integer.MIN_VALUE, maxFreqEle=Integer.MIN_VALUE, minFreq=Integer.MIN_VALUE, minFreqEle=Integer.MIN_VALUE;
+        int maxFreq=Integer.MIN_VALUE, maxFreqEle=Integer.MIN_VALUE, minFreq=Integer.MAX_VALUE, minFreqEle=Integer.MAX_VALUE;
         for(Map.Entry<Integer,Integer> entry : freq.entrySet()){
             if(entry.getValue() > maxFreq){
                 maxFreq = entry.getValue();
@@ -52,7 +52,8 @@ public class P2_HighestFrequency {
                 minFreqEle = entry.getKey();
             }
             else{
-                Math.min(maxFreqEle , entry.getKey());
+                // Math.min(maxFreqEle , entry.getKey());
+                // Math.max(minFreqEle , entry.getKey());
             }
 
         }
