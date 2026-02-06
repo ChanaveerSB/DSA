@@ -1,5 +1,7 @@
 package F3_Arrays;
 
+import java.util.Arrays;
+
 public class P2_SecondMaxMinElement {
     public static int secondLargestElement(int[] nums) {
         int n = nums.length;
@@ -7,14 +9,14 @@ public class P2_SecondMaxMinElement {
         if(nums== null || n < 2) //(n==0 || n==1)
             return -1;
 
-        int max=Integer.MIN_VALUE , secMax=Integer.MIN_VALUE;
+        int max=Integer.MIN_VALUE , secMax=Integer.MIN_VALUE;   //{1, 2, 4, 6, 7, 5}
 
         for(int i=0;i<nums.length;i++){
             if(nums[i]>max){
                 secMax=max;
                 max=nums[i];
             } 
-            else if(nums[i] > secMax && nums[i] != max) {
+            else if(nums[i] > secMax && nums[i] < max) {
                 secMax=nums[i];
             }
         }
@@ -22,6 +24,20 @@ public class P2_SecondMaxMinElement {
         if(secMax == Integer.MIN_VALUE) return -1;
 
         return secMax;
+
+        //normal approach
+        // int n=nums.length;
+        // Arrays.sort(nums);
+        // int max=nums[n-1];
+        // int secMax=Integer.MIN_VALUE;
+        // for(int j=n-2;j>=0;j++){
+        //     if(nums[j] != max) {
+        //         secMax=nums[j];
+        //         break;
+        //     }    
+        // }
+
+        // return secMax; 
 
     }
     public static int secondSmallestElement(int[] nums) {
@@ -46,6 +62,19 @@ public class P2_SecondMaxMinElement {
 
         return secMin;
 
+        //normal approach
+        // int n=nums.length;
+        // Arrays.sort(nums);
+        // int min=nums[0];
+        // int secMin;
+        // for(int j=1;j<n;j++){
+        //     if(nums[j] != min) {
+        //         secMin=nums[j];
+        //         break;
+        //     }    
+        // }
+
+        // return secMin;
     }
 
     public static void main(String[] args) {
