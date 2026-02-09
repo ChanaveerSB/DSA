@@ -29,9 +29,9 @@ public class P6_OptimizedLeftRotateDPlaces {
 
         int[] temp=new int[d];
 
-        reverse(arr,n-d,n);
+        reverse(arr,n-d,n-1);
         reverse(arr,0,n-d-1);
-        reverse(arr,0,n);
+        reverse(arr,0,n-1);
     } 
     public static void main(String[] args) {
         int[] arr={1,2,3,4,5,6,7};
@@ -41,7 +41,7 @@ public class P6_OptimizedLeftRotateDPlaces {
         System.out.println(Arrays.toString(arr));
         leftRotateDPlace(arr,d);
         System.out.println(Arrays.toString(arr));
-        // rightRotateDPlace(arr,d);
+        rightRotateDPlace(arr,d);
         System.out.println(Arrays.toString(arr));
 
     }
