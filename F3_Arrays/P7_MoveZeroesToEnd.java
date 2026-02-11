@@ -15,6 +15,7 @@ public class P7_MoveZeroesToEnd {
                 break;
             }
         }
+        if(i==-1) return;
         for(int j=i+1;j<n;j++){
             if(arr[j]!=0){  //arr[i]==0 checking not need because i will always point to zero valued index 
                 int temp=arr[i];
