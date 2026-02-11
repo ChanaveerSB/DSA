@@ -17,7 +17,7 @@ public class P6_OptimizedLeftRotateDPlaces {
     public static void leftRotateDPlace(int[] arr,int d){
         int n=arr.length;
 
-        int[] temp=new int[d];
+        // int[] temp=new int[d];
 
         reverse(arr,0,d-1);
         reverse(arr,d,n-1);
@@ -27,7 +27,7 @@ public class P6_OptimizedLeftRotateDPlaces {
     public static void rightRotateDPlace(int[] arr,int d){
         int n=arr.length;
 
-        int[] temp=new int[d];
+        // int[] temp=new int[d];
 
         reverse(arr,n-d,n-1);
         reverse(arr,0,n-d-1);

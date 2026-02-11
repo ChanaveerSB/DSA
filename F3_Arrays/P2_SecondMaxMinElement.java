@@ -1,6 +1,6 @@
 package F3_Arrays;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class P2_SecondMaxMinElement {
     public static int secondLargestElement(int[] nums) {
