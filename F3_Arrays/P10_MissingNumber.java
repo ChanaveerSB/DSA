@@ -3,7 +3,10 @@ package F3_Arrays;
 import java.util.Arrays;
 //array ranging from 0 to n
 public class P10_MissingNumber {
-    //optimal method
+    //optimal1 method using xor ^
+
+    
+    //optimal2 method
     public static int missingNumber(int[] nums) {
     int n = nums.length;
     int expected = n * (n + 1) / 2;
