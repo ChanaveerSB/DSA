@@ -24,6 +24,9 @@ public class P5_LeftRotateDPlaces {
 
         int[] temp=new int[d];
 
+        // for(int i=n-1;i>=n-d;i--){
+        //     temp[(n-1)-i]=arr[i];
+        // }
         for(int i=0;i<d;i++){
             temp[i]=arr[n-d+i];
         }
@@ -39,7 +42,7 @@ public class P5_LeftRotateDPlaces {
         int[] arr={1,2,3,4,5,6,7};
         int d=3;
         System.out.println(Arrays.toString(arr));
-        leftRotateDPlace(arr,d);
+        leftRotateDPlace(arr,d);    //{4,5,6,7,1,2,3}
         System.out.println(Arrays.toString(arr));
         rightRotateDPlace(arr,d);
         System.out.println(Arrays.toString(arr));

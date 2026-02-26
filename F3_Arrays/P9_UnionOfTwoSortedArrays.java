@@ -27,7 +27,7 @@ public class P9_UnionOfTwoSortedArrays {
                 j++;
             }
 
-            if (k == 0 || temp[k - 1] != val) {
+            if (k == 0 || temp[k - 1] != val) {     //if k=0 allowed because next condition k-1 checks val
                 temp[k++] = val;
             }
         }

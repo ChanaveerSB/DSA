@@ -39,7 +39,7 @@ public class P6_OptimizedLeftRotateDPlaces {
         // reverse(arr, 3, 7-1);
         
         System.out.println(Arrays.toString(arr));
-        leftRotateDPlace(arr,d);
+        leftRotateDPlace(arr,d);    //{4,5,6,7,1,2,3}
         System.out.println(Arrays.toString(arr));
         rightRotateDPlace(arr,d);
         System.out.println(Arrays.toString(arr));
