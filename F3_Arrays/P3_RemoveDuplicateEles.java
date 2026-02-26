@@ -2,6 +2,7 @@ package F3_Arrays;
 
 import java.util.Arrays;
 
+//In SORTED array only method
 public class P3_RemoveDuplicateEles {
     public static int removeDuplicates(int[] nums) {
         int n=nums.length;
@@ -9,7 +10,7 @@ public class P3_RemoveDuplicateEles {
         int i=0;
  
         for(int j=1;j<n;j++){
-            if(nums[i]!=nums[j]){
+            if(nums[i] != nums[j]){
                 nums[i+1]=nums[j];
                 i++;
             }

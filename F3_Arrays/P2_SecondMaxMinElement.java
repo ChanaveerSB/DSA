@@ -85,7 +85,7 @@ public class P2_SecondMaxMinElement {
         int smin = P2_SecondMaxMinElement.secondSmallestElement(nums);
 
         System.out.println("The second largest element is: " + smax);
-        System.out.println("The second largest element is: " + smin);
+        System.out.println("The second smallest element is: " + smin);
     }
 }
 
