@@ -1,4 +1,4 @@
-package F3_Arrays;
+package F3_Arrays.Easy;
 
 public class MaxConsicutiveOnes {
     //optimal
