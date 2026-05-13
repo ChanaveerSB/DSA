@@ -1,4 +1,4 @@
-package Easy;
+package F3_Arrays.Easy;
 
 public class P12_demo_prog {
     public static void main(String[] args) {

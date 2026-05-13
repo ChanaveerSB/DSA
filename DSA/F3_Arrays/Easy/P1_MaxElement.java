@@ -1,4 +1,4 @@
-package Easy;
+package F3_Arrays.Easy;
 
 public class P1_MaxElement {
     public static int findLargestElement(int[] arr, int n) {

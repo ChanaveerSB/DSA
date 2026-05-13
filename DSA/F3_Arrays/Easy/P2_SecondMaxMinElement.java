@@ -1,4 +1,4 @@
-package Easy;
+package F3_Arrays.Easy;
 
 // import java.util.Arrays;
 

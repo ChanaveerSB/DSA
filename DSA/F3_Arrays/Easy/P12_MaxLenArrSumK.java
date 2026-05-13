@@ -1,4 +1,4 @@
-package Easy;
+package F3_Arrays.Easy;
 
 public class P12_MaxLenArrSumK {
     //optimal method
