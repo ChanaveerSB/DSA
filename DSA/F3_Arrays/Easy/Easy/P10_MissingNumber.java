@@ -1,4 +1,4 @@
-package F3_Arrays.Easy;
+package Easy;
 
 import java.util.Arrays;
 //array ranging from 0 to n

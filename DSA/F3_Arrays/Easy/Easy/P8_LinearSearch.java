@@ -1,4 +1,4 @@
-package F3_Arrays.Easy;
+package Easy;
 
 public class P8_LinearSearch {
     public static int linearSearch(int[] arr, int v){

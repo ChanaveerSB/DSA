@@ -1,4 +1,4 @@
-package F3_Arrays.Easy;
+package Easy;
 
 public class P11_SingleNumber {
     public static int singleNumber(int[] nums) {
