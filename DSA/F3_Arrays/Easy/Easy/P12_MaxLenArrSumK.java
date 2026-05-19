@@ -1,5 +1,8 @@
 package Easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class P12_MaxLenArrSumK {
     //optimal method
     public static int longestSubarrayOptimal(int[] nums, int k) {
@@ -39,7 +42,45 @@ public class P12_MaxLenArrSumK {
         return maxLen;
     }
 
-    //normal method
+    //Better method
+    public static int maxLen(int[] A, int n) {
+        // map prefix sum -> first index seen
+        Map<Integer, Integer> mpp = new HashMap<>();
+        // best length so far
+        int maxi = 0;
+        // running prefix sum
+        int sum = 0;
+
+        // iterate over the array
+        for (int i = 0; i < n; i++) {
+            // update running sum
+            sum += A[i];
+
+            // if sum is zero, subarray [0..i] has zero sum
+            if (sum == 0) {
+                // update best length
+                maxi = i + 1;
+            }
+            // otherwise check if this sum was seen before
+            else {
+                // when seen, zero-sum segment between previous index + 1 and i
+                if (mpp.containsKey(sum)) {
+                    // maximize length
+                    maxi = Math.max(maxi, i - mpp.get(sum));
+                }
+                // first time seeing this sum
+                else {
+                    // record index
+                    mpp.put(sum, i);
+                }
+            }
+        }
+
+        // return best length
+        return maxi;
+    }
+
+    //Brute method
     public static int longestSubarray(int[] nums, int k) {
        int n=nums.length;
 
@@ -68,6 +109,7 @@ public class P12_MaxLenArrSumK {
         int k=15;
 
         // System.out.println(longestSubarray(arr, k));
+        // System.out.println(maxLen(arr, k));
         System.out.println(longestSubarrayOptimal(arr, k));
     }
 }
