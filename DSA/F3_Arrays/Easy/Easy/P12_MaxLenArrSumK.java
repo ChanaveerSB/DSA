@@ -63,8 +63,7 @@ public class P12_MaxLenArrSumK {
             // check if (sum-K) existed before
             if (map.containsKey(sum - K)) {
 
-                maxi = Math.max(maxi,
-                        i - map.get(sum - K));
+                maxi = Math.max(maxi, i - map.get(sum - K));
             }
 
             // store first occurrence only
@@ -100,12 +99,36 @@ public class P12_MaxLenArrSumK {
         return max;
     }
 
+    //mine
+    public static int demo(int[] A, int K){
+        int l=0,s=0;
+        Map<Integer,Integer> h=new HashMap<>();
+
+        for(int i=0;i<A.length;i++){
+            s+=A[i];
+            int t=s-K;
+            if(h.containsKey(t)){
+                l=Math.max(l, i-h.get(t));
+            }
+
+            //We do not overwrite the existing prefix sum because keeping the earliest occurrence helps achieve the maximum possible subarray length.
+            if(!h.containsKey(t))    h.put(s,i);
+            //eg : [2 0 0 3] after put(2,0) we dont wanna override increase index(due to same key 0s) which will reduce maxlen
+        }
+        return l;
+    }
+
     public static void main(String[] args) {
-        int[] arr = { 10, 5, 2, 7, 1, 9 };
+        int[] arr = { -10, -2, 5, 2, 7, 1, -1, 9 };
         int k = 15;
 
         // System.out.println(longestSubarray(arr, k));
         // System.out.println(maxLen(arr, k));
-        System.out.println(longestSubarrayOptimal(arr, k));
+
+        // below only applicable if positive values r in array
+        // System.out.println(longestSubarrayOptimal(arr, k));
+
+        //mine below
+        System.out.println(demo(arr, k));
     }
 }
