@@ -46,7 +46,7 @@ public class P1_TwoSum {
         System.out.println("No Pair Found");
     }
 
-    // Optimal Approach using Two Pointer
+    // Optimal Approach using Opposite direction two pointer, so only applicable on SORTED array
     static void optimal(int[] arr, int target) {
 
         Arrays.sort(arr);
@@ -65,11 +65,9 @@ public class P1_TwoSum {
                         + arr[left] + " , " + arr[right]);
                 return;
             }
-
             else if (sum < target) {
                 left++;
             }
-
             else {
                 right--;
             }
