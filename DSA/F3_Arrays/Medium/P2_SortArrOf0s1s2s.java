@@ -1,6 +1,8 @@
 package F3_Arrays.Medium;
 
-public class P2 {
+public class P2_SortArrOf0s1s2s {
+    //Brute force method is using any efficient sorting method
+
     // Function to sort the array containing only 0s, 1s and 2s
     public static void sortZeroOneTwo(int[] nums) {
         // Initialize count variables for 0s, 1s, and 2s
@@ -31,10 +33,12 @@ public class P2 {
             nums[index++] = 2;
         }
     }
+
+    
     public static void main(String[] args) {
         int[] nums = {1, 0, 2, 1, 0};
 
-        P2.sortZeroOneTwo(nums);
+        P2_SortArrOf0s1s2s.sortZeroOneTwo(nums);
 
         for(int num : nums) {
             System.out.print(num + " ");
