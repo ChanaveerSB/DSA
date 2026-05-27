@@ -3,6 +3,7 @@ package F3_Arrays.Medium;
 public class P2_SortArrOf0s1s2s {
     //Brute force method is using any efficient sorting method
 
+    //Optimal
     // Function to sort the array containing only 0s, 1s and 2s
     public static void sortZeroOneTwo(int[] nums) {
         // Initialize count variables for 0s, 1s, and 2s

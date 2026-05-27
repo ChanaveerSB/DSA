@@ -3,6 +3,7 @@ package F3_Arrays.Medium;
 import java.util.HashMap;
 
 public class P3_MajorityEle {
+    //BruteForce
     public static int majorityElement(int[] nums) {
         
         // Size of the given array
@@ -32,6 +33,7 @@ public class P3_MajorityEle {
         return -1; 
     }
 
+    //Better
     public static int majorityElement2(int[] arr) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -47,6 +49,9 @@ public class P3_MajorityEle {
 
         return -1;
     }
+
+    //Optimal
+    //
     public static int majorityElement3(int[] arr){
         int t=0,c=0;
         int l=arr.length;
@@ -56,7 +61,7 @@ public class P3_MajorityEle {
                 c=1;
                 continue;
             }
-            else if(c>0) c++;
+            else if(t==arr[i]) c++;
             else c--;
         }
         //validation
