@@ -48,7 +48,7 @@ public class P3_MajorityEle {
         return -1;
     }
     public static int majorityElement3(int[] arr){
-        int t=-1,c=0;
+        int t=0,c=0;
         int l=arr.length;
         for(int i=0;i<l;i++){
             if(c==0){
@@ -59,13 +59,13 @@ public class P3_MajorityEle {
             else if(c>0) c++;
             else c--;
         }
-        // //validate
-        // int n=0;
-        // for(int i=0;i<l;i++){
-        //     if(t==arr[i]) n++;
-        // }
-        // if(n>l) return t;
-        return t;
+        //validation
+        int n=0;
+        for(int i=0;i<l;i++){
+            if(t==arr[i]) n++;
+        }
+        if(n>l/2) return t;
+        return -1;
     }
 
     public static void main(String[] args) {
