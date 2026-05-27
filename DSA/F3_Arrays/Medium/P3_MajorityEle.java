@@ -1,5 +1,7 @@
 package F3_Arrays.Medium;
 
+import java.util.HashMap;
+
 public class P3_MajorityEle {
     public static int majorityElement(int[] nums) {
         
@@ -29,10 +31,49 @@ public class P3_MajorityEle {
         // Return -1 if no majority element is found
         return -1; 
     }
+
+    public static int majorityElement2(int[] arr) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int num : arr) {
+
+            map.put(num, map.getOrDefault(num, 0) + 1);
+
+            if (map.get(num) > arr.length / 2) {
+                return num;
+            }
+        }
+
+        return -1;
+    }
+    public static int majorityElement3(int[] arr){
+        int t=-1,c=0;
+        int l=arr.length;
+        for(int i=0;i<l;i++){
+            if(c==0){
+                t=arr[i];
+                c=1;
+                continue;
+            }
+            else if(c>0) c++;
+            else c--;
+        }
+        // //validate
+        // int n=0;
+        // for(int i=0;i<l;i++){
+        //     if(t==arr[i]) n++;
+        // }
+        // if(n>l) return t;
+        return t;
+    }
+
     public static void main(String[] args) {
         int[] arr = {2, 2, 1, 1, 1, 2, 2};
-        int res=majorityElement(arr);
-        System.out.println(res);
+        System.out.println(majorityElement(arr));
+        System.out.println(majorityElement2(arr));
+        System.out.println(majorityElement3(arr));
+
     }
     
 }
