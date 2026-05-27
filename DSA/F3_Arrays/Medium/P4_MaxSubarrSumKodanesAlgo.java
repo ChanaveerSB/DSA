@@ -49,8 +49,8 @@ public class P4_MaxSubarrSumKodanesAlgo {
 
     // Optimal (Kodane's Algo)
     public static int maxSubarrSum3(int[] arr) {
-        int max = Integer.MIN_VALUE; // If max=0 , when all elements are -ve then it will return 0 rather than
-                                     // returning -ve value. So used Integer.MIN_VALUE
+        int max = Integer.MIN_VALUE; // If max=0 , when all elements are -ve then it will return 0 
+                                     // rather than returning -ve value. So used Integer.MIN_VALUE
         int sum = 0;
 
         for (int i : arr) {
