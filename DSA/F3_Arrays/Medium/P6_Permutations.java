@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class P6_Permutations {
-
+    //Beginer
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         boolean[] visited = new boolean[nums.length];
@@ -14,9 +14,7 @@ public class P6_Permutations {
         return result;
     }
 
-    private static void dfs(int[] nums, boolean[] visited,
-                     List<Integer> current,
-                     List<List<Integer>> result) {
+    private static void dfs(int[] nums, boolean[] visited, List<Integer> current, List<List<Integer>> result) {
 
         if (current.size() == nums.length) {
             result.add(new ArrayList<>(current));
@@ -36,10 +34,11 @@ public class P6_Permutations {
         }
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+    //Bit high level
+    public static List<List<Integer>> permute1(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(nums, 0, result);
+        return result;
     }
     
     private static void backtrack(int[] nums, int index, List<List<Integer>> result) {
@@ -58,12 +57,13 @@ public class P6_Permutations {
         }
     }
     
-    public static List<List<Integer>> permute1(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        backtrack(nums, 0, result);
-        return result;
+    private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 
+    //Main Method
     public static void main(String[] args) {
         int[] arr={1,2,3};
 
