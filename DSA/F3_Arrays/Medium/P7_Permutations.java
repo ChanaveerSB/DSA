@@ -3,7 +3,7 @@ package F3_Arrays.Medium;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P6_Permutations {
+public class P7_Permutations {
     //Beginer
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
