@@ -53,12 +53,15 @@ public class P10_LongestConsecutiveSeq {
         if (nums.length == 0) return 0;
 
         Set<Integer> set = new HashSet<>();
+        //O(N)
         for (int num : nums) {
             set.add(num);
         }
 
         int longestSequence = 0;
 
+        //N for iterating each element 
+        //N for overall inner while for incremental search element
         for (int num : set) {
             if (!set.contains(num - 1)) {
                 int currentNum = num;
@@ -76,6 +79,8 @@ public class P10_LongestConsecutiveSeq {
         }
         return longestSequence;
     }
+    //Time complexity : O(N + 2N) = O(3N)
+    //Space complexity : O(N)
     public static void main(String[] args) {
         int[] arr={200,1,203,4,202,3,2,7,1,1};
 
