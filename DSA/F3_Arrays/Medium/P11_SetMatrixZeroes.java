@@ -96,6 +96,7 @@ public class P11_SetMatrixZeroes {
         if(matrix[0][0]==0)
             for(int j=1;j<m;j++)
                 matrix[0][j]=0;
+            
         //0th index row n1 depends on matrix[0][0]
         if(col0==0)
             for(int i=1;i<n;i++)
