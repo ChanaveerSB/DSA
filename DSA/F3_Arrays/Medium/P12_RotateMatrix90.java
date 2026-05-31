@@ -21,8 +21,8 @@ public class P12_RotateMatrix90 {
     public static void rotate1(int[][] matrix) {
         int n = matrix.length;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
                 int t = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = t;
