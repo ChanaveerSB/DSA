@@ -62,7 +62,6 @@ public class P12_MaxLenArrSumK {
 
             // check if (sum-K) existed before
             if (map.containsKey(sum - K)) {
-
                 maxi = Math.max(maxi, i - map.get(sum - K));
             }
 
