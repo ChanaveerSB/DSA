@@ -18,7 +18,7 @@ public class P12_MaxLenArrSumK {
 
             // Shrink the window if sum exceeds k
             while (sum > k && left <= right) {
-                sum -= nums[left];
+                sum = sum - nums[left];  //we r removing left ele and then incrementing left by 1 (left++)
                 left++;
             }
 
