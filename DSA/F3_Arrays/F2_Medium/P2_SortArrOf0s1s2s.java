@@ -1,4 +1,4 @@
-package F3_Arrays.Medium;
+package F3_Arrays.F2_Medium;
 
 public class P2_SortArrOf0s1s2s {
     //Brute force method is using any efficient sorting method

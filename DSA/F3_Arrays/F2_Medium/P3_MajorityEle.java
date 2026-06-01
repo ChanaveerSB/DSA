@@ -1,4 +1,4 @@
-package F3_Arrays.Medium;
+package F3_Arrays.F2_Medium;
 
 import java.util.HashMap;
 
@@ -51,11 +51,12 @@ public class P3_MajorityEle {
     }
 
     //Optimal
-    //
     public static int majorityElement3(int[] arr){
         int t=0,c=0;
         int l=arr.length;
         for(int i=0;i<l;i++){
+            // System.out.println(t);
+            // System.out.println(c);
             if(c==0){
                 t=arr[i];
                 c=1;
@@ -74,7 +75,7 @@ public class P3_MajorityEle {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 2, 1, 1, 1, 2, 2};
+        int[] arr = {5, 5, 2, 2, 2, 5, 5};
         System.out.println(majorityElement(arr));
         System.out.println(majorityElement2(arr));
         System.out.println(majorityElement3(arr));

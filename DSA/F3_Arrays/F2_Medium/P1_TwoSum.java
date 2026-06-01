@@ -1,4 +1,4 @@
-package F3_Arrays.Medium;
+package F3_Arrays.F2_Medium;
 
 import java.util.Arrays;
 import java.util.HashMap;
