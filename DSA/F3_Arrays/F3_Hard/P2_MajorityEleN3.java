@@ -62,6 +62,10 @@ public class P2_MajorityEleN3 {
                 c2--;
             }
         }
+        //During the elimination process (c1--, c2--), counts don’t represent the real number of times elements appeared.
+        //They’re just “vote balances” used to cancel out non-majority elements.
+        //So at the end of the first loop, c1 and c2 are not the actual occurrence counts of ele1 and ele2.
+        //So we redo the verification count of both elements only to set correct occurence
         List<Integer> li = new ArrayList<>();
         c1 = 0;
         c2 = 0;
