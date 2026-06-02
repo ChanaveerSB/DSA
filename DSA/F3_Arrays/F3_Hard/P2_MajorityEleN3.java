@@ -41,13 +41,50 @@ public class P2_MajorityEleN3 {
         return li;
     }
 
-    //Optimal
-    
+    // Optimal
+    public static List<Integer> majorityEle2(int[] nums) {
+        int c1 = 0, ele1 = Integer.MIN_VALUE;
+        int c2 = 0, ele2 = Integer.MIN_VALUE;
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            if (c1 == 0 && ele2 != nums[i]) {
+                ele1 = nums[i];
+                c1++;
+            } else if (c2 == 0 && ele1 != nums[i]) {
+                ele2 = nums[i];
+                c2++;
+            } else if (ele1 == nums[i])
+                c1++;
+            else if (ele2 == nums[i])
+                c2++;
+            else {
+                c1--;
+                c2--;
+            }
+        }
+        List<Integer> li = new ArrayList<>();
+        c1 = 0;
+        c2 = 0;
+        for (int i : nums) {
+            if (ele1 == i)
+                c1++;
+            if (ele2 == i)
+                c2++;
+        }
+        int min = (n / 3);
+        if (c1 > min)
+            li.add(ele1);
+        if (c2 > min)
+            li.add(ele2);
+
+        return li;
+    }
 
     public static void main(String[] args) {
         int[] nums = { 1, 1, 1, 3, 3, 2, 2, 2 };
 
         System.out.println(majorityEle(nums));
         System.out.println(majorityEle1(nums));
+        System.out.println(majorityEle2(nums));
     }
 }
