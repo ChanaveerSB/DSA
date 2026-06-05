@@ -68,14 +68,14 @@ public class P3_ThreeSum {
                 } else {
                     // List<Integer> li=new ArrayList<>(List.of(nums[i],nums[j],nums[k]));
                     // ans.add(li);
-                    ans.add(Arrays.asList(nums[i], nums[j], nums[k]));
+                    ans.add(Arrays.asList(nums[i], nums[j], nums[k]));  //the elements are added from sorted order
                     j++;
                     k--;
                     // to get other combinations with unique j and k that their previous position
                     // elements
                     while (j < k && nums[j] == nums[j - 1])
                         j++;
-                    while (j < k && nums[k] == nums[k + 1])
+                    while (k < j && nums[k] == nums[k + 1]) //j<k is also ok instead of k<j
                         k--;
                 }
             }
