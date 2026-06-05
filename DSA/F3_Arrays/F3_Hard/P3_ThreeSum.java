@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class P3_ThreeSum {
 //Brute
-public List<List<Integer>> threeSumBrute(int[] nums) {
+public static List<List<Integer>> threeSumBrute(int[] nums) {
     int n = nums.length;
     Set<List<Integer>> set = new HashSet<>();
     for (int i = 0; i < n; i++) {
@@ -27,7 +27,7 @@ public List<List<Integer>> threeSumBrute(int[] nums) {
 }
 
 //Better
-public List<List<Integer>> threeSumHash(int[] nums) {
+public static List<List<Integer>> threeSumHash(int[] nums) {
     int n = nums.length;
     Set<List<Integer>> res = new HashSet<>();
     
@@ -47,4 +47,44 @@ public List<List<Integer>> threeSumHash(int[] nums) {
 }
 
 
+    //Optimal (2 pointer) //32:08
+    public static List<List<Integer>> threeSumPointer(int[] nums){
+        List<List<Integer>> ans=new ArrayList<>();
+        int n=nums.length;
+        Arrays.sort(nums);
+        for(int i=0;i<n;i++){
+            //i should'nt increment when in first index so i>0 it can increment only after j>k (video : 32:08) then compare with next ele to move next unique element from previous 
+            if(i>0 && nums[i]==nums[i-1]) continue; //continue becoz for will however increments
+            int j=i+1;
+            int k=n-1;
+            while(j<k){
+                int sum=nums[i]+nums[j]+nums[k];
+                if(sum<0){
+                    j++;
+                }
+                else if(sum>0){
+                    k--;
+                } 
+                else{
+                    // List<Integer> li=new ArrayList<>(List.of(nums[i],nums[j],nums[k]));
+                    //ans.add(li);
+                    ans.add(Arrays.asList(nums[i],nums[j],nums[k]));
+                    j++;
+                    k--;
+                    //to get other combinations with unique j and k that their previous position elements
+                    while(j<k && nums[j]==nums[j-1]) j++;
+                    while(j<k && nums[k]==nums[k+1]) k--;
+                }
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {-1, 0, 1, 2, -1, -4, 3, -2, -3, 4};
+
+        System.out.println(threeSumBrute(nums));
+        System.out.println(threeSumHash(nums));
+        System.out.println(threeSumPointer(nums));
+    }
 }
