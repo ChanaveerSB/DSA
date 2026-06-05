@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class P3_ThreeSum {
+public class P3_ThreeSum {  //target = 0
     // Brute
     public static List<List<Integer>> threeSumBrute(int[] nums) {
         int n = nums.length;
