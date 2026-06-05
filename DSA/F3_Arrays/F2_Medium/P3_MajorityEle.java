@@ -50,7 +50,7 @@ public class P3_MajorityEle {
         return -1;
     }
 
-    //Optimal
+    //Optimal   //Boyer–Moore Majority Vote algorithm
     public static int majorityElement3(int[] arr){
         int t=0,c=0;
         int l=arr.length;

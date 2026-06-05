@@ -41,7 +41,7 @@ public class P2_MajorityEleN3 {
         return li;
     }
 
-    // Optimal
+    // Optimal  //Boyer–Moore Majority Vote algorithm
     public static List<Integer> majorityEle2(int[] nums) {
         int c1 = 0, ele1 = Integer.MIN_VALUE;
         int c2 = 0, ele2 = Integer.MIN_VALUE;

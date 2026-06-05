@@ -49,7 +49,7 @@ public class P1_TwoSum {
     // Optimal Approach using Opposite direction two pointer, so only applicable on SORTED array
     static void optimal(int[] arr, int target) {
 
-        Arrays.sort(arr);
+        Arrays.sort(arr);   //Sorted Array
 
         int left = 0;
         int right = arr.length - 1;
