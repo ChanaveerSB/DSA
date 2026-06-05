@@ -36,7 +36,7 @@ public class P4_FourSum {
     }
 
     //Better:
-        public static List<List<Integer>> fourSumBetter(int[] arr, int target) {
+    public static List<List<Integer>> fourSumBetter(int[] arr, int target) {
         int n = arr.length;
         Set<List<Integer>> set = new HashSet<>();
 
