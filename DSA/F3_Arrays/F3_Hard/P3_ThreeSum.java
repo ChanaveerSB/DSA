@@ -47,7 +47,7 @@ public class P3_ThreeSum {  //target = 0
     }
 
     // Optimal (2 pointer) //32:08
-    public static List<List<Integer>> threeSumPointer(int[] nums) {
+    public static List<List<Integer>> threeSumOptimal(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums);
@@ -71,8 +71,7 @@ public class P3_ThreeSum {  //target = 0
                     ans.add(Arrays.asList(nums[i], nums[j], nums[k]));  //the elements are added from sorted order
                     j++;
                     k--;
-                    // to get other combinations with unique j and k that their previous position
-                    // elements
+                    // to cross over all the duplicate(same) elements
                     while (j < k && nums[j] == nums[j - 1])
                         j++;
                     while (k < j && nums[k] == nums[k + 1]) //j<k is also ok instead of k<j
@@ -88,6 +87,6 @@ public class P3_ThreeSum {  //target = 0
 
         System.out.println(threeSumBrute(nums));
         System.out.println(threeSumHash(nums));
-        System.out.println(threeSumPointer(nums));
+        System.out.println(threeSumOptimal(nums));
     }
 }
