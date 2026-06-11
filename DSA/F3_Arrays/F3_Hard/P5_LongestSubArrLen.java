@@ -6,7 +6,7 @@ import java.util.Map;
 public class P5_LongestSubArrLen {
     // Brute : nested for loop
 
-    // Better
+    // Better : without key ie default check sum==0
     public static int longestSubArrLenBetter(int[] a) {
         Map<Integer, Integer> sumIndexMap = new HashMap<>();
         int maxLen = 0;
@@ -27,6 +27,7 @@ public class P5_LongestSubArrLen {
         return maxLen;
     }
 
+    //Better 
     public static int longestSubArrLenOptimal(int[] arr, int n) {
         Map<Integer, Integer> mpp = new HashMap<>();
         int maxi = 0;
