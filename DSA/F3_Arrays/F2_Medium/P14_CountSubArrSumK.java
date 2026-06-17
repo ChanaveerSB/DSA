@@ -46,7 +46,7 @@ public class P14_CountSubArrSumK {
         return c;
     }
 
-    // Optimal
+    // Optimal  //video : 20:55 short explain in a minute
     public static int countSubArrOfSumK2(int[] arr, int k) {
         Map<Integer, Integer> h = new HashMap<>();
         int preSum = 0;
