@@ -128,15 +128,3 @@ public class P2_SecondMaxMinElement {
 //     }
 // }
 
-// public class Main {
-
-//     public static void main(String[] args) {
-
-//         // Driver code
-//         int n = 6;
-//         int[] arr = {1, 2, 4, 6, 7, 5};  // Array of elements
-
-//         // Call the function to find and print the second smallest and second largest elements
-//         Solution.getElements(arr, n);
-//     }
-// }
