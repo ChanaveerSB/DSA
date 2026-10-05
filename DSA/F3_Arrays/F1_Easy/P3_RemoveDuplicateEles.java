@@ -2,7 +2,7 @@ package F3_Arrays.F1_Easy;
 
 import java.util.Arrays;
 
-//In SORTED array only method
+//In SORTED array only method //two pointer approach
 public class P3_RemoveDuplicateEles {
     public static int removeDuplicates(int[] nums) {
         int n=nums.length;
@@ -21,7 +21,7 @@ public class P3_RemoveDuplicateEles {
     }
 
     public static void main(String[] args) {
-        int[] arr={0, 0, 3, 3, 5, 6};
+        int[] arr={0, 0, 0, 3, 3, 3, 5, 5, 6};
 
         System.out.println(removeDuplicates(arr));
         System.out.println(Arrays.toString(arr));
